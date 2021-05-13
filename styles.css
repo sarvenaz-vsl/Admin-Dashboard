@@ -11,6 +11,7 @@ body {
 
 html {
     --light-blue: #03a9f4;
+    --white: #fff;
 }
 
 .container {
@@ -62,7 +63,7 @@ html {
     width: 100%;
     display: flex;
     text-decoration: none;
-    color: #fff;
+    color: var(--white);
 }
 
 .navigation ul li a .icon {
@@ -75,12 +76,12 @@ html {
 }
 
 .navigation ul li a .icon .fas {
-    color: #fff;
+    color: var(--white);
     font-size: 24px;
 }
 
 .navigation ul li a .icon .fab {
-    color: #fff;
+    color: var(--white);
     font-size: 24px;
 }
 
@@ -109,7 +110,7 @@ html {
 
 .topbar {
     width: 100%;
-    background: #fff;
+    background: var(--white);
     height: 60px;
     display: flex;
     padding: 0 10px;
@@ -192,7 +193,7 @@ html {
 
 .cardBox .card {
     position: relative;
-    background-color: #fff;
+    background-color: var(--white);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -211,4 +212,109 @@ html {
 .card .iconBox {
     font-size: 2.3rem;
     color: var(--light-blue);
+}
+
+.datails {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-top: 0;
+}
+
+.recentOrders {
+    position: relative;
+    display: grid;
+    min-height: 530px;
+    padding: 20px;
+    background-color: var(--white);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cardHeader h2 {
+    font-weight: 600;
+}
+
+.btn {
+    position: relative;
+    background-color: var(--light-blue);
+    color: var(--white);
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+table {
+    padding-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead td {
+    font-weight: 600;
+}
+
+.recentOrders table tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.recentOrders table tr:last-child {
+    border-bottom: none;
+}
+
+.recentOrders table tbody tr:hover {
+    background-color: var(--light-blue);
+    color: var(--white);
+}
+
+.recentOrders table tr td {
+    padding: 9px 5px;
+}
+
+.recentOrders table thead tr td:last-child,
+.recentOrders table tbody tr td:last-child {
+    text-align: right;
+}
+
+.recentOrders table thead tr td:nth-child(2),
+.recentOrders table tbody tr td:nth-child(2) {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.recentOrders table thead tr td:nth-child(3),
+.recentOrders table tbody tr td:nth-child(3) {
+    text-align: center;
+}
+
+.status {
+    position: relative;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 2px 4px;
+    color: var(--white);
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+.delivered {
+    background-color: #8de02c;
+}
+
+.pending {
+    background-color: #f9ca3f;
+}
+
+.return {
+    background-color: #f00;
+}
+
+.inprogress {
+    background-color: #1795ce;
 }
