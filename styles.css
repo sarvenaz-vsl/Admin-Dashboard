@@ -125,6 +125,7 @@ html {
     width: 60px;
     height: 60px;
     cursor: pointer;
+    color: #111;
 }
 
 .fa-bars {
@@ -135,7 +136,6 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #111;
 }
 
 .search {
@@ -303,8 +303,8 @@ table thead td {
     font-weight: 300;
     padding: 2px 4px;
     color: var(--white);
-    border-radius: 4px;
-    letter-spacing: 1px;
+    border-radius: 20px;
+    padding: 4px 10px;
 }
 
 .delivered {
@@ -367,4 +367,83 @@ table thead td {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.2em;
+}
+
+@media (max-width: 992px) {
+    /* --Navigation-- */
+    .navigation {
+        left: -300px;
+    }
+    .navigation.active {
+        width: 300px;
+        left: 0;
+    }
+
+    /* --Main-- */
+    .main {
+        width: 100%;
+        left: 0;
+    }
+    .main.active {
+        width: calc(100% - 300px);
+        left: 300px;
+    }
+
+    /* --Card Boxes-- */
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* --Details-- */
+    .datails {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cardHeader h2 {
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* --Main-- */
+    .main, 
+    .main.active {
+        width: 100%;
+        left: 0;
+    }
+
+    /* --Details-- */
+    .cardBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .recentOrders {
+        overflow-x: auto;
+    }
+    .recentOrders table {
+        width: 600px;
+    }
+
+    /* --Navigation-- */
+    .navigation {
+        width: 100%;
+        left: -100%;
+        z-index: 2;
+    }
+    .navigation.active {
+        width: 100%;
+        left: 0;
+    }
+
+    /* --Toggle-- */
+    .toggle.active {
+        z-index: 5;
+        right: 0;
+        left: initial;
+        position: absolute;
+    }
+    .toggle.active {
+        color: var(--white);
+    }
 }
